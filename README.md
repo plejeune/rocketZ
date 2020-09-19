@@ -1,10 +1,8 @@
-![RocketZ](rocketZ.png)
+![RocketZ](screenshot.png)
 #
 # RocketZ
 
 Simulation de pilotage en vue isométrique Unity + API REST, réalisé pour l'Epreuve intégrée du BES WEBDEVELOPER
-
-![RocketZ](screenshot.png)
 
 ## A propos
 

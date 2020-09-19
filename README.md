@@ -2,7 +2,7 @@
 #
 # RocketZ
 
-Simulation de pilotage en vue isométrique Unity + API REST, réalisé pour l'Epreuve intégrée du BES WEBDEVELOPER.
+Simulation de pilotage en vue isométrique à l'aide d'Unity + API REST, réalisé pour l'Epreuve intégrée du BES WEBDEVELOPER SeraingSup 2019-2020.
 
 ## A propos
 

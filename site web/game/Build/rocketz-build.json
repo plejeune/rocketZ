@@ -1,0 +1,13 @@
+{
+"companyName": "Pierre Arthur Lejeune",
+"productName": "RocketZ",
+"dataUrl": "rocketz-build.data.unityweb",
+"asmCodeUrl": "rocketz-build.asm.code.unityweb",
+"asmMemoryUrl": "rocketz-build.asm.memory.unityweb",
+"asmFrameworkUrl": "rocketz-build.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

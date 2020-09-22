@@ -1,16 +1,6 @@
 (function() {
-    const config = {
-        //FIREBASE CONFIG
-        apiKey: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX_XXXXXXXXX",
-        authDomain: "XXXXXX.firebaseapp.com",
-        databaseURL: "https://XXXXXX.firebaseio.com",
-        projectId: "XXXXXX",
-        storageBucket: "XXXXXX.appspot.com",
-        messagingSenderId: "XXXXXXXXXXXXX",
-        appId: "1:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        measurementId: "G-XXXXXXXXXX"
-    };
-
+	
+    const config = {databaseURL: "https://test-5ff15.firebaseio.com"};
     firebase.initializeApp(config);
 
     var table = document.querySelector('#table1 tbody'); 
@@ -22,13 +12,22 @@
             table.removeChild(table.firstChild);
         }
 
-        var scores = snap.val();
+		var scores = Object.values(snap.val())
+		scores.sort(function(a, b){
+			if(a.userScore<b.userScore){
+				return 1;
+			}else if(a.userScore>b.userScore){
+				return -1;
+			}else{
+				return 0;
+			}
+		});
       
         for(var i in scores) {          
             var row = table.insertRow(-1);          
             for(var j in scores[i]) {             
                 cell = row.insertCell(-1);
-                cell.innerHTML = scores[i][j];
+                cell.innerHTML = scores[i][j];	
             }
         }
     });

@@ -7,45 +7,38 @@
         <link rel="stylesheet" href="src/css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-        <script src="src/js/jquery-3.3.1.min.js"></script>
     </head>
 
-  <body style="background: url('src/img/bg.png') no-repeat right top fixed;background-size:cover;color:#fff;width:100vw;">
-      <header>
-		  
-		  <div class="header-box">
-			
+	<body style="background: url('src/img/bg.png') no-repeat right top fixed;background-size:cover;color:#fff;width:100vw;">
+		<header>
+			  
+			<div class="header-box">
+				
 				<div class="img-box">
-					<!-- <img src=""> -->
+						<!-- <img src=""> -->
+					</div>
+					
+					<nav>
+						<ul>
+							<a href="index.html"><li>Accueil</li></a>
+							<a href="game/index.html" target="_blank"><li>Jouer</li></a>
+							<li class="green">Scores</li>
+							<a href="https://github.com/plejeune/rocketz" target="_blank"><li>Dépôt Git</li></a>
+						</ul>
+					</nav>
+					
 				</div>
-				
-				<nav>
-					<ul>
-						<a href="index.html"><li>Accueil</li></a>
-						<a href="game/index.html" target="_blank"><li>Jouer</li></a>
-						<li class="green">Scores</li>
-						<a href="https://github.com/plejeune/rocketz" target="_blank"><li>Dépôt Git</li></a>
-					</ul>
-				</nav>
-				
-			</div>
-      </header>
-      <div class="container" style="width:30%;margin-top:60px;background:rgba(0,0,0,.5);border-radius:10px;margin-left:80px;">
-          <table class="table sortable" id="table1"><br>
-              <thead>
-					<tr>
-						<th style="display:none;"></th>
-						<th style="display:none;"></th>
-						<th style="display:none;"></th>
-					</tr>
-              </thead>
-              <tbody>
-              </tbody>
-          </table>
-      </div>
-	  
-	  <footer style="position:absolute; bottom:20px;right:10px;">LEJEUNE Pierre - Epreuve intégrée BES WEBDEVELOPER 2020</footer>
-     
-	  <script src="src/js/firebase.js"></script>
+		</header>
+		<div class="container" style="width:30%;margin-top:60px;background:rgba(0,0,0,.5);border-radius:10px;margin-left:80px;">
+			<table class="table" id="table1"><br>
+				<thead>
+					<b>&nbsp; Meilleurs scores :</b><br><br>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>  
+		<footer style="position:absolute; bottom:20px;right:10px;">LEJEUNE Pierre - Epreuve intégrée BES WEBDEVELOPER 2020</footer>
+		<script src="src/js/firebase.js"></script>
     </body>
 </html>

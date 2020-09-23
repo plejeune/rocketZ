@@ -9,11 +9,11 @@ using UnityEngine.Serialization;
 public class UserController : MonoBehaviour {
 
     public Text Info, scoreText, newScoreText;
-    public GameObject infoBox, switchText, logPanel, btnWhenLogged, logBtn, scoreFolder;
+    public GameObject infoBox, switchText, logPanel, btnWhenLogged, logBtn, signBtn, connectBtn, creaText, scoreFolder, usernameField;
     public InputField getScoreText, emailText, usernameText, passwordText;
 
-    private string databaseURL = "https://XXXXXXXXX.firebaseio.com/users";
-    private string AuthKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX_XXXXXXXXX";
+    private string databaseURL = "https://test-5ff15.firebaseio.com/users";
+    private string AuthKey = "AIzaSyBFdzIDmvQiUH5xCanIcxNX3_uNNF52qZ0";
     private string idToken, getLocalId;
 
     public static int playerScore, newScore;
@@ -46,6 +46,16 @@ public class UserController : MonoBehaviour {
         newScoreText.text = "" + newScore;
         playerScore = user.userScore;
     }
+
+    /*
+    //Increase score
+    public void winPoint()
+    {
+        user.userScore += 1;
+        scoreText.text = "" + user.userScore;
+        playerScore = user.userScore;
+    }
+    */
 
     public void Save()
     {
@@ -116,6 +126,12 @@ public class UserController : MonoBehaviour {
                     Info.GetComponent<Text>().text = "Compte créé avec succès !";
                     Info.GetComponent<Text>().color = Color.green;
                     infoBox.GetComponent<Animation>().Play("infoAnim");
+
+                    switchText.SetActive(false);
+                    usernameField.SetActive(false);
+                    connectBtn.SetActive(true);
+                    signBtn.SetActive(false);
+                    creaText.SetActive(true);
 
                     idToken = response.idToken;
                     localId = response.localId;

@@ -7,7 +7,7 @@ public class Ticket : MonoBehaviour {
     public bool isTriggered1 = false; //if anonym
     public bool isTriggered2 = false; //if logged
 
-    public GameObject infoText, panel, logBtn, ticket, controller;
+    public GameObject infoText, panel, logBtn, ticket, controller, particles, ticketText;
 
     void Update () {
 
@@ -59,6 +59,8 @@ public class Ticket : MonoBehaviour {
     public void getTicket()
     {
         ticket.SetActive(true);
+        ticketText.SetActive(true);
+        particles.SetActive(true);
 
         panel.SetActive(false);
         infoText.GetComponent<TextMesh>().text = "";

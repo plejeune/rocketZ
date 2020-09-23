@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour {
 
-    public GameObject controller, rocket, rocketObject, explosion, items, deadPanel;
+    public GameObject controller, rocket, rocketObject, explosion, items, deadPanel, gauge;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -24,6 +24,7 @@ public class Bomb : MonoBehaviour {
         rocket.SetActive(false);
         items.SetActive(false);
         deadPanel.SetActive(true);
+        gauge.SetActive(false);
 
         controller.GetComponent<UserController>().OnGetScore();
 
